@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+<style>
+#draggable-1{
+width:100px;
+height:100px;
+padding:0.5em;
+float:left;
+margin:22px 5px 10px 0;
+
+}
+#droppable{
+width:150px;
+height:120px;
+padding:0.5em;
+float:left;
+margin:10px;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$("#draggable").draggable();
+	$("#droppable").droppable();
+});
+</script>
+</head>
+
+<body>
+<div id="draggable">
+<p>I am JQuery</br>Drag me to javascript</p>
+</div>
+<div id="droppable">
+<p>I am JavaScript</p>
+</div>
+</body>
+</html>
