@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+<style>
+  #draggable, #draggable-2, #draggable-3, draggable-4 { 
+  width: 100px;
+  height: 100px; 
+  padding: 0.5em; 
+  float: left; 
+  margin: 0 10px 10px 0; 
+  }
+  #containment-wrapper{
+  width:100%;
+  height:150px;
+  border:2px solid pink;
+  padding:10px;
+  }
+
+</style>
+<script>
+$(document).ready(function(){
+	$("#draggable").draggable({
+		axis:"x"
+	});
+	
+	$("#draggable-2").draggable({
+		axis:"y"
+	});
+	$("#draggable-3").draggable({
+		containment:"#containment-wrapper",
+		scroll:false
+	});
+	$("#draggable-4").draggable({
+		containment:"parent"
+	});
+	
+	
+});
+</script>
+</head>
+
+<body>
+
+<div id="draggable" class="ui-widget-content">  
+      <p>Scroll set to true. Default setting.</p>  
+   </div>  
+<div id="draggable-2" class="ui-widget-header">  
+      <p>scrollSensitivity set to 100</p>  
+   </div> 
+<div id="draggable-3" class="ui-widget-header">  
+      <p>scrollSpeed set to 100</p>  
+   </div>
+<div id="draggable-4" class="ui-widget-header">  
+      <p>scrollSpeed set to 100</p>  
+   </div> 
+      
+</body>
+</html>

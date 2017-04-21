@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+<style>
+  #draggable, #draggable-2, #draggable-3 { 
+  width: 100px;
+  height: 100px; 
+  padding: 0.5em; 
+  float: left; 
+  margin: 0 10px 10px 0; 
+  }
+
+</style>
+<script>
+$(document).ready(function(){
+	$("#draggable").draggable({
+		scroll:true	
+	});
+	$("#draggable-2").draggable({
+		scroll:true,
+		scrollSensitivity:100
+	});
+	$("#draggable-3").draggable({
+		scroll:true,
+		scrollSensitivity:100
+	});
+	
+});
+</script>
+</head>
+
+<body>
+
+<div id="draggable" class="ui-widget-content">  
+      <p>Scroll set to true. Default setting.</p>  
+   </div>  
+   <div id="draggable-2" class="ui-widget-header">  
+      <p>scrollSensitivity set to 100</p>  
+   </div>  
+   <div id="draggable-3" class="ui-widget-header">  
+      <p>scrollSpeed set to 100</p>  
+   </div>  
+      
+</body>
+</html>
